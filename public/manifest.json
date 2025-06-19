@@ -1,6 +1,6 @@
 {
-  "name": "Superb Bespoke ロイヤリティプログラム",
-  "short_name": "Superb Bespoke",
+  "name": "Superb Bespoke",
+  "short_name": "S.Bespoke",
   "description": "高級オーダースーツブランドの紹介プログラム",
   "start_url": "/",
   "display": "standalone",
@@ -8,6 +8,16 @@
   "theme_color": "#000000",
   "orientation": "portrait",
   "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
