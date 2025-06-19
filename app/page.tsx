@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 import Header from './components/Header'
 import CustomerCard from './components/CustomerCard'
 import QRCodeDisplay from './components/QRCodeDisplay'
+import ShareButtons from './components/ShareButtons'
 
 // 顧客データ（実際はデータベースから取得）
 const customerDatabase: Record<string, { name: string; rank: 'BRONZE' | 'SILVER' | 'GOLD' | 'PLATINUM' }> = {
@@ -34,22 +35,9 @@ function InvitePageContent() {
           <QRCodeDisplay customerId={customerId} />
         </div>
 
-        {/* シェアボタンエリア（Phase 4で実装） */}
-        <div className="w-full max-w-sm mx-auto mt-6 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <div className="grid grid-cols-2 gap-3">
-            <button className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm hover:bg-gray-200 transition-colors">
-              LINE
-            </button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm hover:bg-gray-200 transition-colors">
-              メール
-            </button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm hover:bg-gray-200 transition-colors">
-              リンクコピー
-            </button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm hover:bg-gray-200 transition-colors">
-              共有
-            </button>
-          </div>
+        {/* シェアボタン */}
+        <div className="mt-6">
+          <ShareButtons customerId={customerId} customerName={customerData.name} />
         </div>
       </main>
     </div>
