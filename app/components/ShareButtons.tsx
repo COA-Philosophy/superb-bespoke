@@ -37,7 +37,7 @@ export default function ShareButtons({ customerId, customerName }: ShareButtonsP
       await navigator.clipboard.writeText(referralUrl)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
+    } catch {
       // フォールバック
       const textArea = document.createElement('textarea')
       textArea.value = referralUrl
@@ -59,7 +59,7 @@ export default function ShareButtons({ customerId, customerName }: ShareButtonsP
           text: `${customerName}様からの特別なご紹介です。`,
           url: referralUrl
         })
-      } catch (err) {
+      } catch {
         // ユーザーがキャンセルした場合は何もしない
       }
     } else {
